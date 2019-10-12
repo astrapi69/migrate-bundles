@@ -20,11 +20,18 @@ import org.springframework.transaction.PlatformTransactionManager
 import lombok.AccessLevel
 import lombok.AllArgsConstructor
 import lombok.experimental.FieldDefaults
+import org.springframework.beans.factory.annotation.Autowired
 
 @Configuration
-class CsvFileToBaseNamesStepConfiguration(val applicationProperties: ApplicationProperties,
-                                          val entityManagerFactory: EntityManagerFactory,
-                                          val stepBuilderFactory: StepBuilderFactory, val transactionManager: PlatformTransactionManager) {
+class CsvFileToBaseNamesStepConfiguration {
+
+    lateinit var entityManagerFactory: EntityManagerFactory
+
+    lateinit var applicationProperties: ApplicationProperties
+
+    lateinit var stepBuilderFactory: StepBuilderFactory
+
+    lateinit var transactionManager: PlatformTransactionManager
 
 
     @Bean
@@ -54,7 +61,7 @@ class CsvFileToBaseNamesStepConfiguration(val applicationProperties: Application
 
     @Bean
     fun csvFileToBaseNamesStep(): Step {
-        return stepBuilderFactory!!.get("csvFileToBrosStep").chunk<BaseName, BaseNames>(10).reader(baseNamesReader())
+        return stepBuilderFactory.get("csvFileToBrosStep").chunk<BaseName, BaseNames>(10).reader(baseNamesReader())
                 .processor(baseNamesProcessor()).writer(baseNamesWriter()).transactionManager(transactionManager).build()
     }
 

@@ -6,7 +6,7 @@ val entCoreVersion by extra("1.7.1")
 val springToolExtensionsVersion by extra("1.4")
 
 plugins {
-	id("org.springframework.boot") version "2.1.9.RELEASE"
+	id("org.springframework.boot") version "2.1.1.RELEASE"
 	id("io.spring.dependency-management") version "1.0.8.RELEASE"
 	kotlin("jvm") version "1.2.71"
 	kotlin("plugin.spring") version "1.2.71"
@@ -33,6 +33,7 @@ repositories {
 }
 
 dependencies {
+	compile("io.github.microutils:kotlin-logging:1.3.2")
 	compile("org.mapstruct:mapstruct:$mapstructVersion")
 	compileOnly("org.mapstruct:mapstruct-processor:$mapstructVersion")
 	annotationProcessor("org.mapstruct:mapstruct-processor:$mapstructVersion")
@@ -43,14 +44,10 @@ dependencies {
 	implementation("org.postgresql:postgresql")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
-	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	implementation("org.springframework.boot:spring-boot-starter-batch")
 	implementation("org.springframework.boot:spring-boot-starter-jdbc")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
-	testImplementation("org.springframework.batch:spring-batch-test")
 }
 
 tasks.withType<KotlinCompile> {
