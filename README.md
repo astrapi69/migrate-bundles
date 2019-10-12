@@ -2,15 +2,13 @@
 
 <div align="center">
 
-[![Build Status](https://travis-ci.org/astrapi69/spring-batch-kt-template.svg?branch=develop)](https://travis-ci.org/astrapi69/spring-batch-kt-template)
-[![Open Issues](https://img.shields.io/github/issues/astrapi69/spring-batch-kt-template.svg?style=flat)](https://github.com/astrapi69/spring-batch-kt-template/issues) 
+[![Build Status](https://travis-ci.org/astrapi69/migrate-bundles.svg?branch=develop)](https://travis-ci.org/astrapi69/migrate-bundles)
+[![Open Issues](https://img.shields.io/github/issues/astrapi69/migrate-bundles.svg?style=flat)](https://github.com/astrapi69/migrate-bundles/issues) 
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](http://opensource.org/licenses/MIT)
 [![Donate](https://img.shields.io/badge/donate-❤-ff2244.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GVBTWLRAZ7HB8)
 </div>
 
-Template project for Spring Boot Batch projects implemented in kotlin.
-
-How to create a repository from a template repository is documented [here](https://help.github.com/en/articles/creating-a-repository-from-a-template)
+Migration with spring-batch of legacy bundle data to new model
 
 If you like this project put a ⭐ and donate
 
@@ -33,7 +31,7 @@ or over ether with:
 
 0xaB6EaE10F352268B0CA672Dd6e999C86344D49D8
 
-or over flattr: <a href="http://flattr.com/thing/4152938/astrapi69spring-batch-kt-template-on-GitHub" target="_blank">
+or over flattr: <a href="http://flattr.com/thing/4152938/astrapi69migrate-bundles-on-GitHub" target="_blank">
 <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
 </a>
  
@@ -43,7 +41,7 @@ The source code comes under the liberal MIT License
 
 ## Semantic Versioning
 
-The versions of spring-batch-kt-template are maintained with the Semantic Versioning guidelines.
+The versions of migrate-bundles are maintained with the Semantic Versioning guidelines.
 
 Release version numbers will be incremented in the following format:
 
@@ -53,24 +51,24 @@ For detailed information on versioning you can visit the [wiki page](https://git
 
 ## Want to Help and improve it? ###
 
-The source code for spring-batch-kt-template are on GitHub. Please feel free to fork and send pull requests!
+The source code for migrate-bundles are on GitHub. Please feel free to fork and send pull requests!
 
-Create your own fork of [astrapi69/spring-batch-kt-template/fork](https://github.com/astrapi69/spring-batch-kt-template/fork)
+Create your own fork of [astrapi69/migrate-bundles/fork](https://github.com/astrapi69/migrate-bundles/fork)
 
-To share your changes, [submit a pull request](https://github.com/astrapi69/spring-batch-kt-template/pull/new/develop).
+To share your changes, [submit a pull request](https://github.com/astrapi69/migrate-bundles/pull/new/develop).
 
 Don't forget to add new units tests on your changes.
 
 ## Contacting the Developer
 
-Do not hesitate to contact the spring-batch-kt-template developers with your questions, concerns, comments, bug reports, or feature requests.
-- Feature requests, questions and bug reports can be reported at the [issues page](https://github.com/astrapi69/spring-batch-kt-template/issues).
+Do not hesitate to contact the migrate-bundles developers with your questions, concerns, comments, bug reports, or feature requests.
+- Feature requests, questions and bug reports can be reported at the [issues page](https://github.com/astrapi69/migrate-bundles/issues).
 
 ## Credits
 
 |**Travis CI**|
 |     :---:      |
 |[![Travis CI](https://travis-ci.com/images/logos/TravisCI-Full-Color.png)]|
-|[![Build Status](https://travis-ci.org/astrapi69/spring-batch-kt-template.svg?branch=master)](https://travis-ci.org/astrapi69/spring-batch-kt-template)|
+|[![Build Status](https://travis-ci.org/astrapi69/migrate-bundles.svg?branch=master)](https://travis-ci.org/astrapi69/migrate-bundles)|
 |Special thanks to [Travis CI](https://travis-ci.org) for providing a free continuous integration service for open source projects|
 |     <img width=1000/>     |

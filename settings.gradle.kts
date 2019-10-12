@@ -1,1 +1,1 @@
-rootProject.name = "spring-batch-kt-template"
+rootProject.name = "migrate-bundles"

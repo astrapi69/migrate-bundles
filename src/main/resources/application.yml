@@ -1,15 +1,19 @@
 
 app:
-  name: batch-template # TODO change after cloning template project
+  name: migrate-bundles
   dir: ${user.home}/.${app.name}
-  csv-dir: ${app.dir}/csv/
-  db-name: batch-template # TODO change after cloning template project
-  db-username: postgres  # TODO change after cloning template project
-  db-password: postgres # TODO change after cloning template project
+  csv-dir: ${user.home}/tmp/bundles-csv
+  basenames-filename: bundles_public_basenames.csv
+  db-host: localhost
+  db-name: bundles
+  db-username: postgres
+  db-password: postgres
   db-port: 5432
   db-url-prefix: jdbc:postgresql://
 
 spring:
+  main:
+    web-application-type: none
   batch:
     initialize-schema: always
   datasource:
@@ -30,5 +34,6 @@ spring:
       show_sql: true
     properties:
       hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
         temp:
           use_jdbc_metadata_defaults: false

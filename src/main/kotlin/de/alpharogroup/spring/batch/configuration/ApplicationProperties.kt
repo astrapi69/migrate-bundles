@@ -3,9 +3,16 @@ package de.alpharogroup.spring.batch.configuration
 import org.springframework.boot.context.properties.ConfigurationProperties
 
 @ConfigurationProperties(prefix = "app")
-class ApplicationProperties(var name: String, var dbHost: String,
-                            var dbName: String, var dbPort: Int,
-                            var dbUrlPrefix: String, var dbUsername: String,
-                            var dbPassword: String,
-                            var dir: String,
-                            var csvDir: String)
+class ApplicationProperties
+{
+    lateinit var name: String
+    lateinit var dbHost: String
+    lateinit var dbName: String
+    lateinit var dbPort: Integer
+    lateinit var dbUrlPrefix: String
+    lateinit var dbUsername: String
+    lateinit var dbPassword: String
+    lateinit var dir: String
+    lateinit var csvDir: String
+    lateinit var basenamesFileName: String
+}

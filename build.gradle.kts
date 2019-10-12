@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 val jobjCoreVersion by extra("3.2.1")
 val mapstructVersion by extra("1.3.0.Final")
-val entCoreVersion by extra("1.7")
+val entCoreVersion by extra("1.7.1")
 val springToolExtensionsVersion by extra("1.4")
 
 plugins {
@@ -14,7 +14,7 @@ plugins {
 }
 
 group = "de.alpharogroup"
-version = "1"
+version = "1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_1_8
 
 
@@ -38,6 +38,7 @@ dependencies {
 	annotationProcessor("org.mapstruct:mapstruct-processor:$mapstructVersion")
 	compile("de.alpharogroup:ent-core:$entCoreVersion")
 	compile("de.alpharogroup:jobj-core:$jobjCoreVersion")
+	compile("javax.xml.bind:jaxb-api:2.3.0")
 	compile("de.alpharogroup:spring-tool-extensions:$springToolExtensionsVersion")
 	implementation("org.postgresql:postgresql")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
@@ -46,6 +47,7 @@ dependencies {
 	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	implementation("org.springframework.boot:spring-boot-starter-batch")
+	implementation("org.springframework.boot:spring-boot-starter-jdbc")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.batch:spring-batch-test")
