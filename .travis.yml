@@ -1,0 +1,18 @@
+# spring-batch-kt-template .travis.yml
+
+language: java
+before_install:
+   - chmod +x gradlew
+
+cache:
+  directories:
+  - $HOME/.m2
+
+jdk:
+    - openjdk8
+
+notifications:
+    email:
+        recipients:
+            - asterios.raptis@web.de
+        on_failure: always
