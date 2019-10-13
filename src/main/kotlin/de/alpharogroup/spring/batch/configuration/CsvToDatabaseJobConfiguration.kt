@@ -14,7 +14,8 @@ class CsvToDatabaseJobConfiguration {
 
 
     @Bean
-    fun importCsvFilesJob(@Autowired jobBuilderFactory: JobBuilderFactory, @Autowired  csvFileToBaseNamesStep: Step): Job {
+    fun importCsvFilesJob(@Autowired jobBuilderFactory: JobBuilderFactory,
+                          @Autowired  csvFileToBaseNamesStep: Step): Job {
         return jobBuilderFactory.get("importCsvFilesJob").incrementer(RunIdIncrementer())
                 .start(csvFileToBaseNamesStep)
                 .build()

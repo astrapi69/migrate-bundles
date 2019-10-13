@@ -1,12 +1,13 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 val jobjCoreVersion by extra("3.2.1")
+val genericMapperVersion by extra("2")
 val mapstructVersion by extra("1.3.0.Final")
 val entCoreVersion by extra("1.7.1")
 val springToolExtensionsVersion by extra("1.4")
 
 plugins {
-	id("org.springframework.boot") version "2.1.1.RELEASE"
+	id("org.springframework.boot") version "2.1.9.RELEASE"
 	id("io.spring.dependency-management") version "1.0.8.RELEASE"
 	kotlin("jvm") version "1.2.71"
 	kotlin("plugin.spring") version "1.2.71"
@@ -34,11 +35,9 @@ repositories {
 
 dependencies {
 	compile("io.github.microutils:kotlin-logging:1.3.2")
-	compile("org.mapstruct:mapstruct:$mapstructVersion")
-	compileOnly("org.mapstruct:mapstruct-processor:$mapstructVersion")
-	annotationProcessor("org.mapstruct:mapstruct-processor:$mapstructVersion")
 	compile("de.alpharogroup:ent-core:$entCoreVersion")
 	compile("de.alpharogroup:jobj-core:$jobjCoreVersion")
+	compile("de.alpharogroup:generic-mapper:$genericMapperVersion")
 	compile("javax.xml.bind:jaxb-api:2.3.0")
 	compile("de.alpharogroup:spring-tool-extensions:$springToolExtensionsVersion")
 	implementation("org.postgresql:postgresql")
